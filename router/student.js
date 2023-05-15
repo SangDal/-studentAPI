@@ -8,7 +8,7 @@ import * as studentController from '../controller/studentController.js';
 const router = express.Router();
 
 // 학생 전체 정보 목록 조회
-router.get('/', studentController.getAllStudents);
+router.get('/:id', studentController.getAllStudents);
 
 // 학생 생성
 router.post('/', studentController.createStudent);

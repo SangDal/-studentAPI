@@ -1,6 +1,6 @@
 import SQ, { Sequelize } from 'sequelize';
 import { sequelize } from '../db/database.js';
-import { Student } from './student.js';
+//import { Student } from './student.js';//처음에 foreign키 잘못 설정함 ...
 
 // 테이블 없으면 만들어주는.
 const DataTypes = SQ.DataTypes; 
@@ -42,8 +42,8 @@ const Score = sequelize.define(
     { timestamps: false }
 );
 
-Score.belongsTo(Student, { foreignKey: 'id', targetKey: 'id' });
-//Score.belongsTo(Student); // 위랑 아래랑 둘중 뭘까?
+//Score.belongsTo(Student, { foreignKey: 'id', targetKey: 'id' });
+//처음에 foreign키 잘못 설정함 ...
 
 
 Score.sync()

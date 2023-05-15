@@ -1,6 +1,6 @@
 import SQ from 'sequelize';
 import { sequelize } from '../db/database.js';
-//import { Score } from './score.js';
+import { Score } from './score.js';
 
 // 서버를 다시 킬때마다 테이블을 새로 만들면 기존 데이터가 날라가니까..
 
@@ -41,7 +41,7 @@ export const Student = sequelize.define(
     }
 });
 
-//Student.belongsTo(Score, { foreignKey: 'id', targetKey: 'id' });
+Student.belongsTo(Score, { foreignKey: 'id', targetKey: 'id' });
 
 sequelize.sync()
     .then(() => {
