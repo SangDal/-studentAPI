@@ -1,0 +1,66 @@
+student
+
+
+*studentGET 전체 학생목록 
+
+http://localhost:8080/student
+
+*studentPOST 학생생성
+
+http://localhost:8080/student
+
+*****************************************
+Body
+{
+    "student_number":"00001",
+    "name":"반하나",
+    "contact":"0102222222",
+    "email":"banana@naver.com",
+    "address":"서울시 송파구"
+}
+*****************************************
+*studentDELETE 학생 삭제
+http://localhost:8080/student/1
+
+*studentPUT 학생 수정
+http://localhost:8080/student/2
+
+*****************************************
+Body
+{
+    "student_number":"00001",
+    "name":"반하나",
+    "contact":"0102222222",
+    "email":"banana@naver.com",
+    "address":"서울시 강남구 역삼동"
+}
+*****************************************
+
+
+
+*scoreGET
+http://localhost:8080/score/1
+
+*scorePOST 점수생성
+http://localhost:8080/score/1
+*****************************************
+Body
+{
+    "java_score":80,
+    "python_score":80,
+    "c_score":80
+}
+*****************************************
+*scorePUT 점수 수정
+http://localhost:8080/score/1
+*****************************************
+Body
+{
+    "java_score":75,
+    "python_score":80,
+    "c_score":60
+}
+*****************************************
+
+*scoreDELETE 점수삭제
+http://localhost:8080/score/1
