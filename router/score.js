@@ -2,37 +2,20 @@
 
 import express from 'express';
 import { Score } from '../data/score.js';
+import * as scoreController from '../controller/scoreController.js';
 
 const router = express.Router();
 
-// 점수 목록 조회
-router.get('/', (req, res, next) => {
-  res.json(Score);
-});
+// id 임력시 해당 id학생 점수 조회
+router.get('/:id', scoreController.getScoreById);
 
-// 점수 생성
-router.post('/', (req, res, next) => {
-  const { java_score, python_score, c_score, total_score, average_score } = req.body;
-  // 점수 생성 로직 추가
-
-  res.status(201).json({ message: 'Score created successfully' });
-});
+// 점수 생성 JSON에 ID값 넣어줘야 생성가능
+router.post('/:id', scoreController.createScore);
 
 // 점수 수정
-router.put('/:id', (req, res, next) => {
-  const { id } = req.params;
-  const { java_score, python_score, c_score, total_score, average_score } = req.body;
-  // 점수 수정 로직 추가
-
-  res.json({ message: 'Score updated successfully' });
-});
+router.put('/:id', scoreController.updateScore);
 
 // 점수 삭제
-router.delete('/:id', (req, res, next) => {
-  const { id } = req.params;
-  // 점수 삭제 로직 추가
-
-  res.json({ message: 'Score deleted successfully' });
-});
+router.delete('/:id', scoreController.deleteScore);
 
 export default router;

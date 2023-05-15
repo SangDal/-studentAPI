@@ -24,13 +24,14 @@ app.use((error, req, res, next) => {
     res.sendStatus(500);
 });
 
+
 // Sequelize 연결
 sequelize
     .authenticate()
     .then(() => {
         console.log('Connection to the database has been established successfully.');
-        app.listen(config.port, () => {
-        console.log(`Server is running on port ${config.port}`);
+        app.listen(config.host.port, () => {
+        console.log(`Server is running on port ${config.host.port}`);
         });
     })
     .catch((error) => {
