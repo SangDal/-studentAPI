@@ -10,7 +10,7 @@ export const getAllStudents = async (req, res, next) => {
   }
 };
 
-// 학생 상세 정보 조회
+// 일련번호(id)를 이용하여 학생 정보 조회
 export const getStudentById = async (req, res, next) => {
   const { id } = req.params;
   try {
@@ -83,7 +83,8 @@ export const deleteStudent = async (req, res, next) => {
   }
 };
 
-
+// 학번을 입력하여 점수와 학생 정보를 모두 출력하게 하는 소스
+// 해보려 했지만 에러가 자꾸 발생하였습니다. 
 export const getStudentWithScoreBySN = async (req, res, next) => {
     
     const { studentNumber } = req.params;

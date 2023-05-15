@@ -1,4 +1,3 @@
-// import mysql from 'mysql2'; sequelize 깔았으므로 삭제해도 됨
 import { config } from '../config.js';
 import SQ from 'sequelize';
 

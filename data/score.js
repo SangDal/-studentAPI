@@ -42,8 +42,14 @@ const Score = sequelize.define(
     { timestamps: false }
 );
 
+<<<<<<< HEAD
+// 일련번호(id)로 연결해주기
+Score.belongsTo(Student, { foreignKey: 'id', targetKey: 'id' });
+
+=======
 //Score.belongsTo(Student, { foreignKey: 'id', targetKey: 'id' });
 //처음에 foreign키 잘못 설정함 ...
+>>>>>>> 7d3c48eade89a856ae0fa3193041cb2a39815127
 
 
 Score.sync()

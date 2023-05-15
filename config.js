@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 
-
+// .env 파일에서 정보 받아오기
 dotenv.config();
 
 

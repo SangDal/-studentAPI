@@ -1,8 +1,10 @@
 import SQ from 'sequelize';
 import { sequelize } from '../db/database.js';
+<<<<<<< HEAD
+=======
 import { Score } from './score.js';
+>>>>>>> 7d3c48eade89a856ae0fa3193041cb2a39815127
 
-// 서버를 다시 킬때마다 테이블을 새로 만들면 기존 데이터가 날라가니까..
 
 // DataTypes: 데이터 타입을 결정해주는 prop
 const DataTypes = SQ.DataTypes; 
@@ -41,7 +43,11 @@ export const Student = sequelize.define(
     }
 });
 
+<<<<<<< HEAD
+
+=======
 Student.belongsTo(Score, { foreignKey: 'id', targetKey: 'id' });
+>>>>>>> 7d3c48eade89a856ae0fa3193041cb2a39815127
 
 sequelize.sync()
     .then(() => {
